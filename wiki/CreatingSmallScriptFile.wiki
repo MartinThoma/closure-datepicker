@@ -5,3 +5,9 @@ Go to console and type:
 {{{
 java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js --js_output_file datepickerClosure-compiled.js
 }}}
+
+or even better:
+
+{{{
+java -jar /var/www/closure-library-read-only/closure-compiler/compiler.jar --js /var/www/closure-library-read-only/closure/goog/base.js --js /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure-compiled.js
+}}}
