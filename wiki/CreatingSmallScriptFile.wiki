@@ -9,5 +9,5 @@ java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js /var/www/
 or even better if you use the [http://code.google.com/intl/de-DE/closure/library/docs/calcdeps.html dependency tree calculation script]:
 
 {{{
-python calcdeps.py -i /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js -p /var/www/closure-library-read-only/closure/goog -o compiled -c /var/www/closure-library-read-only/closure-compiler/compiler.jar > closureDatepicker.js
+python calcdeps.py -i /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js -p /var/www/closure-library-read-only/closure/goog -o compiled -c /var/www/closure-library-read-only/closure-compiler/compiler.jar > /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js
 }}}
