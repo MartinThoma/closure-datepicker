@@ -1,7 +1,6 @@
 The closure-datepicker can be compared with the following datepickers:
 
-= MooTools Datepicker 1 =
-
+= Mootools Datepicker 1 =
   * Script size: 76,5 kB (3 script files)
   * Design size: 
     * Design 1: 5,4 kB (5 files)
@@ -13,6 +12,11 @@ The closure-datepicker can be compared with the following datepickers:
     * Multi-lingual and date formatting
     * Dates can be disabled
 
+= Mootools Datepicker 2 =
+  * Script size: 197,6 kB (6 script files)
+  * Design size: 7,5 kB (3 files)
+  * Features:
+    * Switching months / years is quite impressive 
 
 = Details =
 
