@@ -1,13 +1,20 @@
 In this text I will explain how to create a small script file.
 
 = Introduction =
-Go to console and type:
+Go to console and type (explained on [http://code.google.com/intl/de/closure/compiler/docs/gettingstarted_app.html this page]):
 {{{
-java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js --js_output_file datepickerClosure-compiled.js
+java -jar compiler.jar \
+--compilation_level ADVANCED_OPTIMIZATIONS \
+--js /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js \ --js_output_file datepickerClosure-compiled.js
 }}}
 
 or even better if you use the [http://code.google.com/intl/de-DE/closure/library/docs/calcdeps.html dependency tree calculation script]:
 
 {{{
-python calcdeps.py -i /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js -p /var/www/closure-library-read-only/closure/goog -o compiled -c /var/www/closure-library-read-only/closure-compiler/compiler.jar > /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js
+python calcdeps.py \
+-i /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js \
+-p /var/www/closure-library-read-only/closure/goog \
+-o compiled \
+-c /var/www/closure-library-read-only/closure-compiler/compiler.jar
+-f "--compilation_level=ADVANCED_OPTIMIZATIONS" > /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js
 }}}
