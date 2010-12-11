@@ -5,16 +5,17 @@ Go to console and type (explained on [http://code.google.com/intl/de/closure/com
 {{{
 java -jar compiler.jar \
 --compilation_level ADVANCED_OPTIMIZATIONS \
---js /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js \ --js_output_file datepickerClosure-compiled.js
+--js /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js \
+--js_output_file datepickerClosure-compiled.js
 }}}
 
 or even better if you use the [http://code.google.com/intl/de-DE/closure/library/docs/calcdeps.html dependency tree calculation script]:
 
 {{{
 python calcdeps.py \
--i /var/www/closure-library-read-only/closure/goog/projekte/datepickerClosure.js \
+-i /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js \
 -p /var/www/closure-library-read-only/closure/goog \
 -o compiled \
--c /var/www/closure-library-read-only/closure-compiler/compiler.jar
--f "--compilation_level=ADVANCED_OPTIMIZATIONS" > /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker.js
+-c /var/www/closure-library-read-only/closure-compiler/compiler.jar \
+-f "--compilation_level=ADVANCED_OPTIMIZATIONS" > /var/www/closure-library-read-only/closure/goog/projekte/closureDatepicker-compiled.js
 }}}
