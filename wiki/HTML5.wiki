@@ -7,7 +7,12 @@ HTML5 has a lot of cool new features. One of those new features is a {{{<input t
 = Pro: Why the datepicker should use type="date" =
   * it's semantically better
   * the datepicker written by us could only be a fallback, if the browser doesn't support type="date"
+  * the "pattern" attribute could be used if we would use type="text, e.g. {{{<input type="text" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" />}}} (this RegEx can be improved significantly)
+  * required could be used: {{{<input type="date" required="required" />}}}
 
 = Contra: Why we should use type="text" =
   * We can be sure how browsers react
   * Always the same design on every browser
+
+= Fallback =
+A possibility how to create this fallback was explained on [http://www.unchi.co.uk/2010/05/17/html5-date-picker-with-fallback/ www.unchi.co.uk]
