@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+For this project I used http://code.google.com/p/closure-library/source/browse/trunk/closure/goog/demos/datepicker.html?r=247
+and http://code.google.com/p/closure-library/source/browse/trunk/closure/goog/demos/inputdatepicker.html?r=247 which are governed by an Apache 2.0 License (http://www.apache.org/licenses/LICENSE-2.0).
+-->
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Terminplaner Datepicker</title> 
+  <script src="./closureDatepicker-compiled.js"></script> 
+  <link rel="stylesheet" href="css/datepicker.css"> 
+</head>
+<body>
+  <h1>closure-datepicker</h1>
+    <form method="post">
+      <label for="MyStartDate">begin</label>
+      <input type="text" name="MyStartDate" id="MyStartDate" />
+      <label for="MyEndDate">end</label>
+      <input type="text" name="MyEndDate" id="MyEndDate"/>
+      <input type="submit"/>
+    </form>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+<br/>
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  <script> 
+    var picker = new picker('MyStartDate', 'MyEndDate', ['2011-01-04', '2011-01-21', '2011-01-23:2011-01-25'], 0);
+  </script> 
+</body>
+</html>
