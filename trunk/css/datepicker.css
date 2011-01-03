@@ -1,0 +1,115 @@
+/* Thanks to http://www.electricprism.com/aeron/calendar/ for the design */
+.goog-date-picker table {
+    border: 2px solid #0597da;
+    border-top:10px solid #0597da;
+    padding: 3px;
+}
+
+.goog-date-picker-btn {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #2200CC;
+    font-weight: bold;
+    margin: 1px 0;
+    padding: 0;
+}
+
+.goog-date-picker-date {
+    color: #0597DB;
+    font: 12px Arial,Helvetica,sans-serif;
+    height: 21px;
+    text-align: center;
+    width: 21px;
+    font-size: 11px;
+    background-color: white;
+    text-align:center;
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("calendar-valid.gif") repeat scroll 0 0 transparent;
+    cursor:pointer;
+}
+.goog-date-picker-wday {
+    border: 0 none;
+    color: #0597DB;
+    font: 12px Arial,Helvetica,sans-serif;
+    height: 21px;
+    text-align: center;
+    width: 21px;
+}
+.goog-date-picker-other-month {
+    color:#999;
+}
+
+.goog-date-picker-wkend-start, .goog-date-picker-wkend-end{
+    background-color: #efefef;
+}
+
+.goog-date-picker-today {
+    background: url("calendar-today.gif") repeat scroll 0 100% transparent;
+    color:white;
+}
+
+.dp-weekday-selected {
+    background-color: blue;
+}
+
+.goog-date-picker-selected{
+    color: #FFFFFF;
+    background: url("calendar-valid.gif") repeat scroll 0 100% #40b0e3;
+}
+
+.goog-date-picker-monthyear {
+    text-align:center;
+    color: #333333;
+    font: 12px/16px Arial,Helvetica,sans-serif;
+}
+
+.goog-date-picker {
+    display: block;
+    left: 354px;
+    opacity: 1;
+    position: absolute;
+    top: 129px;
+    visibility: visible;
+    z-index: 1000;
+    background-color:white;
+}
+
+.goog-date-picker-blocked {
+    color: #f00;
+    background: url("calendar-blocked.gif") repeat scroll 0 0 #40b0e3;
+}
+
+.goog-date-picker-menu ul {
+    list-style:none;
+}
+
+.goog-date-picker-menu {
+  position: absolute;
+  background-color: #eee;
+  border: 1px solid gray;
+  -moz-user-focus: normal;
+  z-index: 1;
+  outline: none;
+  font-size:13px;
+  padding:10px;
+  padding-right:20px;
+}
+
+.goog-date-picker-menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.goog-date-picker-menu ul li {
+  cursor: pointer;
+}
+.goog-date-picker-menu ul li:hover {
+  background-color:#fcc;
+}
+
+.goog-date-picker-menu-selected {
+  background: #ccf;
+}
