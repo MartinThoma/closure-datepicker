@@ -59,6 +59,11 @@
     background: url("calendar-valid.gif") repeat scroll 0 100% #40b0e3;
 }
 
+.goog-date-picker-hilite{
+    color: #0597DB;
+    background: url("calendar-hilite.gif") repeat scroll 0 100% #40b0e3;
+}
+
 .goog-date-picker-monthyear {
     text-align:center;
     color: #333333;
@@ -79,6 +84,7 @@
 .goog-date-picker-blocked {
     color: #f00;
     background: url("calendar-blocked.gif") repeat scroll 0 0 #40b0e3;
+    cursor:crosshair;
 }
 
 .goog-date-picker-menu ul {
@@ -112,4 +118,9 @@
 
 .goog-date-picker-menu-selected {
   background: #ccf;
+}
+
+.goog-date-picker-grey {
+    color: #fff;
+    background: url("calendar-td.gif") repeat scroll 0 100% #40b0e3;
 }
