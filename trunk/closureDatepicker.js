@@ -36,7 +36,7 @@ moose.picker.end   = moose.picker.start;
  */
 goog.ui.DatePicker.prototype.dateDecorator = function (date) {
     var self = this;
-    var dateString = date.toString(true);
+    var dateString = date.toString();
     var isBlocked  = goog.array.find(this.blocked_dates, function (blocked) {
             if(goog.string.contains(blocked, ':')){
                 var rangedBlockDate = blocked.split(':');
@@ -64,40 +64,28 @@ goog.ui.DatePicker.prototype.dateDecorator = function (date) {
 moose.picker = function(id1, id2, blocked_dates, padding) {
     var formatter = new goog.i18n.DateTimeFormat(moose.picker.PATTERN);
     var parser    = new goog.i18n.DateTimeParse(moose.picker.PATTERN);
-
-    // initialDate: today
-    var initialDate = new goog.date.Date();
+    var inputElement1 = goog.dom.getElement(id1);
+    var inputElement2 = goog.dom.getElement(id2);
+    moose.picker.start= inputElement1.value.substr(6, 4)+inputElement1.value.substr(3, 2)+inputElement1.value.substr(0, 2); //language-specific!!!
+    moose.picker.end  = inputElement2.value.substr(6, 4)+inputElement2.value.substr(3, 2)+inputElement2.value.substr(0, 2); //language-specific!!!
 
      // Block dates
     this.blocked_dates = blocked_dates;
 
     this.idp1 = new goog.ui.InputDatePicker(formatter, parser);
-    this.idp1.decorate(goog.dom.getElement(id1));
-    // customize my datepicker:
+    this.idp1.decorate(inputElement1);
     this.dp1 = this.idp1.getDatePicker();
-
     this.dp1.setShowToday(false);
     this.dp1.setAllowNone(false);
     this.dp1.setShowWeekNum(false);
     this.dp1.setShowOtherMonths(false);
     this.dp1.setUseSimpleNavigationMenu(true);
     this.dp1.setUseNarrowWeekdayNames(true);
-    //is this faster?:
-    /*
-    this.idp1.popupDatePicker_.datePicker_.setShowToday(false);
-    this.idp1.popupDatePicker_.datePicker_.setAllowNone(false);
-    this.idp1.popupDatePicker_.datePicker_.setShowWeekNum(false);
-    this.idp1.popupDatePicker_.datePicker_.setShowOtherMonths(false);
-    this.idp1.popupDatePicker_.datePicker_.setUseSimpleNavigationMenu(true);
-    this.idp1.popupDatePicker_.datePicker_.setUseNarrowWeekdayNames(true);*/
-
     this.dp1.blocked_dates = this.blocked_dates;
     this.dp1.setDecorator(this.dp1.dateDecorator);
-    this.dp1.setDate(initialDate);
- 
+
     this.idp2 = new goog.ui.InputDatePicker(formatter, parser);
-    this.idp2.decorate(goog.dom.getElement(id2));
-    // customize my datepicker:
+    this.idp2.decorate(inputElement2);
     this.dp2 = this.idp2.getDatePicker();
     this.dp2.setShowToday(false);
     this.dp2.setAllowNone(false);
@@ -107,13 +95,10 @@ moose.picker = function(id1, id2, blocked_dates, padding) {
     this.dp2.setUseNarrowWeekdayNames(true);
     this.dp2.blocked_dates = this.blocked_dates;
     this.dp2.setDecorator(this.dp2.dateDecorator);
-    this.dp2.setDate(initialDate);
 
     goog.events.listen( this.idp1, goog.ui.DatePicker.Events.CHANGE, this.onDateChanged1, false, this);
-    //goog.events.listen( goog.dom.getElement(id1), goog.events.EventType.CHANGE, this.onDateChanged1, false, this);
 
     goog.events.listen( this.idp2, goog.ui.DatePicker.Events.CHANGE, this.onDateChanged2, false, this);
-    //goog.events.listen( goog.dom.getElement(id2), goog.events.EventType.CHANGE, this.onDateChanged2, false, this);
 };
 
 /**
