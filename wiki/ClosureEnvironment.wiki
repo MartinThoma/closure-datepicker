@@ -1,0 +1,22 @@
+#summary How to structure the differenct closure tools.
+
+= Introduction =
+
+If you read the other Wiki-Pages about how to get a small script size, you have to set up your closure tools. Here is a tutorial.
+
+
+= Tutorial =
+
+I made this tutorial for Ubuntu-Users.
+
+{{{
+sudo apt-get install ant openjdk-6-jre-headless openjdk-6-jre-lib wget subversion unzip
+
+cd /var/www
+mkdir closure
+cd closure
+svn checkout http://closure-library.googlecode.com/svn/trunk/ closure-library
+
+wget http://closure-compiler.googlecode.com/files/compiler-latest.zip
+unzip compiler-latest.zip
+}}}
