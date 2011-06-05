@@ -10,6 +10,7 @@ If you read the other Wiki-Pages about how to get a small script size, you have 
 I made this tutorial for Ubuntu-Users.
 
 {{{
+//you might need to purge openjdk first
 sudo apt-get install ant wget subversion unzip sun-java6-jre sun-java6-jdk sun-java6-source
 
 cd /var/www
@@ -17,8 +18,6 @@ mkdir closure
 cd closure
 svn checkout http://closure-library.googlecode.com/svn/trunk/ closure-library
 
-wget http://closure-compiler.googlecode.com/files/compiler-latest.zip
-unzip compiler-latest.zip -d closure-compiler
-cd closure-compiler/
+svn checkout http://closure-compiler.googlecode.com/svn/trunk/ closure-compiler
 ant jar
 }}}
